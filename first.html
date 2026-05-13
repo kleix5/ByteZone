@@ -1,0 +1,182 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ByteZone — Облачные серверы</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="Pictures/goo-logo ByteZone.png" alt="Описание изображения" width="37" height="62" style="float: left; margin-right: 15px;" >
+        <div class="logo">ByteZone</div> 
+        <div class="tag">Облачные сервера для работы ваших проектов</div>
+      </div>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <a href="#home">Главная</a>
+        <a href="#prices">Тарифы / Цены</a>
+        <a href="#about">О нас</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="regestration.html" class="btn-outline">Войти / Зарегистрироваться</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Облачные сервера для работы ваших проектов</h1>
+          <p class="lead">Надёжный хостинг, удобная панель управления и профессиональные инструменты — мы словно все ваши данные.</p>
+          <div class="hero-cta">
+            <a href="#prices" class="btn-primary">Выбрать тариф</a>
+            <a href="#about" class="btn-secondary">Узнать больше</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="server-illustration">
+            <div class="rack">
+              <div class="unit unit-1">Б-безопасная</div>
+              <div class="unit unit-2">С-система</div>
+              <div class="unit unit-3">П-пользования</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>О нас</h2>
+      <p>ByteZone — это удобная облачная платформа, ориентированная на надёжность и простоту использования. Мы предлагаем понятную панель управления, FTP/SFTP доступ, MySQL базы данных и поддержку популярных языков программирования. Наша цель — сделать развёртывание и сопровождение проектов максимально быстрым и прозрачным.</p>
+      <div class="about-grid">
+        <div>
+          <h3>Локация</h3>
+          <p>Москва, ул. инструментальная</p>
+        </div>
+        <div>
+          <h3>Инструменты</h3>
+          <p>FTP / SFTP; MySQL; Панель управления; SSH; Автоматические бэкапы</p>
+        </div>
+        <div>
+          <h3>Поддержка</h3>
+          <p>Профессиональная техподдержка 24/7</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="advantages container">
+      <h2>Преимущества</h2>
+      <ul class="advantages-list">
+        <li>Высокая доступность и резервирование</li>
+        <li>Простая и понятная панель управления</li>
+        <li>Гибкие тарифы и масштабирование</li>
+        <li>Круглосуточная поддержка</li>
+      </ul>
+    </section>
+
+    <section id="prices" class="pricing container">
+      <h2>Тарифы</h2>
+      <p class="pricing-desc">Выберите тариф, который подходит именно вашему проекту.</p>
+
+      <div class="pricing-grid">
+        <article class="tariff-card">
+          <header class="plan-head">
+            <h3>Базовый</h3>
+            <div class="price">299₽<span>/мес</span></div>
+          </header>
+          <ul class="plan-features">
+            <li>512 GB SSD</li>
+            <li>1 vCPU</li>
+            <li>32 GB RAM</li>
+            <li>1 GB/s Traffic</li>
+          </ul>
+          <a class="btn-select" href="#auth">Оформить</a>
+        </article>
+
+        <article class="tariff-card">
+          <header class="plan-head">
+            <h3>Стандарт</h3>
+            <div class="price">599₽<span>/мес</span></div>
+          </header>
+          <ul class="plan-features">
+            <li>2 TB SSD</li>
+            <li>1 vCPU</li>
+            <li>64 GB RAM</li>
+            <li>2 GB/s Traffic</li>
+          </ul>
+          <a class="btn-select" href="#auth">Оформить</a>
+        </article>
+
+        <article class="tariff-card">
+          <header class="plan-head">
+            <h3>Премиум</h3>
+            <div class="price">1999₽<span>/мес</span></div>
+          </header>
+          <ul class="plan-features">
+            <li>5 TB SSD</li>
+            <li>2 vCPU</li>
+            <li>128 GB RAM</li>
+            <li>32 GB/s Traffic</li>
+          </ul>
+          <a class="btn-select" href="#auth">Оформить</a>
+        </article>
+
+        <article class="tariff-card">
+          <header class="plan-head">
+            <h3>Бизнес</h3>
+            <div class="price">2999₽<span>/мес</span></div>
+          </header>
+          <ul class="plan-features">
+            <li>10 TB SSD</li>
+            <li>2 vCPU</li>
+            <li>256 GB RAM</li>
+            <li>1 TB/s Traffic</li>
+          </ul>
+          <a class="btn-select" href="#auth">Оформить</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Контакты</h2>
+      <div class="contact-grid">
+        <div><strong>Наш Telegram<a href="https://t.me/NewsByteZone">
+          <img src="Pictures/Telegram_logo2.svg.png" alt="ТГК">
+          </a>
+        </strong>
+        <div><strong>Телефон</strong>: 8-800-555-35-35</div>
+        <div><strong>Email</strong>: bytezonesmtp@gmail.com</div>
+        <div><strong>Тех.поддержка</strong>: <a href="https://t.me/HelpBytezone_bot">
+          <img src="Pictures/4961736_02(1).png" alt="Поддержка">
+          </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> ByteZone — Все права защищены</p>
+      <div class="footer-links">
+        <a href="#about">О нас</a>
+        <a href="#prices">Тарифы</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Небольшой скрипт для года и мобильного меню
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
