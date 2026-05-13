@@ -1,0 +1,238 @@
+
+/* styles.css */
+/* Базовые переменные и сброс */
+:root{
+    --bg:#0f1724;
+    --card:#0b1220;
+    --accent:#5eead4;
+    --muted:#94a3b8;
+    --accent-2:#7c3aed;
+    --white:#ffffff;
+    --glass: rgba(255,255,255,0.04);
+    --radius:12px;
+    --container:1100px;
+    --shadow: 0 6px 20px rgba(2,6,23,0.6);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color-scheme: dark;
+  }
+  
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background: linear-gradient(180deg, #071028 0%, #051027 100%);
+    color:var(--white);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
+  }
+  
+  /* Контейнер */
+  .container{
+    width:calc(100% - 40px);
+    max-width:var(--container);
+    margin:0 auto;
+    padding:40px 0;
+  }
+  
+  /* Header */
+  .site-header{
+    backdrop-filter: blur(6px);
+    background: linear-gradient(180deg, rgba(12,18,30,0.6), rgba(6,10,18,0.3));
+    position: sticky;
+    top:0;
+    z-index:40;
+    border-bottom:1px solid rgba(255,255,255,0.03);
+  }
+  .header-inner{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 0;
+  }
+  .brand .logo{
+    font-weight:700;
+    font-size:20px;
+    color:var(--accent-2);
+    letter-spacing:0.4px;
+  }
+  .brand .tag{
+    font-size:12px;
+    color:var(--muted);
+  }
+  .main-nav{
+    display:flex;
+    gap:18px;
+    align-items:center;
+  }
+  .main-nav a{
+    color:var(--white);
+    text-decoration:none;
+    font-size:14px;
+    padding:8px 10px;
+    border-radius:8px;
+  }
+  .main-nav a:hover{background:var(--glass)}
+  .btn-outline{
+    border:1px solid rgba(255,255,255,0.06);
+    padding:8px 12px;
+  }
+  
+  /* Mobile toggle */
+  .nav-toggle{
+    display:none;
+    background:transparent;
+    color:var(--white);
+    border:0;
+    font-size:20px;
+  }
+  
+  /* Hero */
+  .hero{
+    padding:60px 0;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:30px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:32px;
+    margin-bottom:12px;
+    color:var(--white);
+  }
+  .lead{color:var(--muted);margin-bottom:18px}
+  .hero-cta .btn-primary,
+  .btn-select{
+    display:inline-block;
+    background:linear-gradient(90deg,var(--accent-2),var(--accent));
+    color:#06121a;
+    padding:12px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+  }
+  .btn-secondary,
+  .btn-outline{
+    display:inline-block;
+    margin-left:10px;
+    color:var(--white);
+    text-decoration:none;
+    background:transparent;
+    padding:10px 14px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.04);
+  }
+  
+  /* Hero visual simple rack */
+  .server-illustration{display:flex;align-items:center;justify-content:center}
+  .rack{
+    width:220px;
+    height:160px;
+    background:linear-gradient(180deg,#081426,#062033);
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .unit{
+    flex:1;
+    border-radius:8px;
+    background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-weight:700;
+  }
+  
+  /* About */
+  .about h2,
+  .advantages h2,
+  .pricing h2,
+  .contact h2{
+    font-size:22px;
+    margin-bottom:12px;
+  }
+  .about p{color:var(--muted);margin-bottom:18px}
+  .about-grid{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .about-grid > div{background:var(--card);padding:14px;border-radius:10px;flex:1;min-width:200px}
+  
+  /* Advantages */
+  .advantages-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;color:var(--muted);list-style:none;padding:0}
+  
+  /* Pricing */
+  .pricing-desc{color:var(--muted);margin-bottom:18px}
+  .pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+  }
+  .plan{
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:18px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.03);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+  }
+  .plan.recommended{
+    transform:translateY(-10px);
+    border:2px solid rgba(124,58,237,0.9);
+    box-shadow: 0 20px 40px rgba(124,58,237,0.12);
+  }
+  .tariff-card {
+    background-color: #0B1120;
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    border: 2px solid transparent; 
+    transition: all 0.3s ease-in-out;
+  }
+  .tariff-card:hover {
+    border-color: #8b5cf6; 
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+    transform: translateY(-5px);
+  }
+  .plan-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  .plan-head h3{font-size:18px;color:var(--white)}
+  .price{font-weight:700;font-size:20px;color:var(--accent);display:flex;align-items:baseline;gap:8px}
+  .price span{font-size:12px;color:var(--muted)}
+  .plan-features{list-style:none;padding:0;margin:12px 0;color:var(--muted)}
+  .plan-features li{padding:6px 0;border-top:1px dashed rgba(255,255,255,0.02);font-size:14px}
+  .btn-select{width:100%;text-align:center;padding:10px;border-radius:10px;margin-top:10px}
+  
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;color:var(--muted)}
+  
+  /* Footer */
+  .site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:18px 0;margin-top:30px;background:transparent}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .footer-links a{color:var(--muted);text-decoration:none;margin-left:10px}
+    
+  /* Responsive */
+  @media (max-width:1000px){
+    .hero-grid{grid-template-columns:1fr 320px}
+    .pricing-grid{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:1fr}
+    .about-grid{flex-direction:column}
+  }
+  @media (max-width:720px){
+    .header-inner{align-items:center}
+    .main-nav{position:fixed;right:12px;top:72px;background:linear-gradient(180deg, rgba(6,10,18,0.96), rgba(6,10,18,0.98));flex-direction:column;padding:12px;border-radius:12px;display:none;min-width:180px}
+    .main-nav.open{display:flex}
+    .nav-toggle{display:block}
+    .hero-grid{grid-template-columns:1fr;gap:18px}
+    .pricing-grid{grid-template-columns:1fr}
+    .brand .tag{display:none}
+  }
+  
