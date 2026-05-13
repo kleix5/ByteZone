@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель клиента - Продукты/Услуги</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile_style.css">
+
+</head>
+<body>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+            <img src="goo-logo ByteZone.png" alt="Описание изображения" width="37" height="62" style="float: left; margin-right: 15px;" >
+            <div class="logo">ByteZone</div> 
+            <div class="tag">Облачные сервера для работы ваших проектов</div>
+        </div>
+        <!-- <nav class="main-nav">
+          <a href="#">Главная</a>
+          <a href="#">Сервисы</a>
+          <a href="#">О нас</a>
+          <a href="#">Выйти</a>
+          <a href="#" class="btn-outline">Панель клиента</a>
+        </nav> -->
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+    </header>
+
+    <div class="page-header-banner h1">
+        <div class="container">
+            <h1>Здравствуйте, [ник пользователя]!</h1>
+            <nav class="breadcrumbs">
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="dashboard-layout">
+        
+            <aside class="sidebar">
+            
+                <div class="sidebar-panel">
+                    <div class="sidebar-header">
+                        <span>Просмотр</span>
+                        <i>&#9650;</i> </div>
+                    <div class="sidebar-body">
+                        <ul class="sidebar-list">
+                            <li>
+                                <a href="#">
+                                    <span>Активный</span>
+                                    <span class="badge">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Ожидает</span>
+                                    <span class="badge">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Приостановлен</span>
+                                    <span class="badge">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Удален</span>
+                                    <span class="badge">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Отменен</span>
+                                    <span class="badge">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="sidebar-panel">
+                    <div class="sidebar-header">
+                        <span>Действия</span>
+                        <i>&#9650;</i>
+                    </div>
+                    <div class="sidebar-body">
+                        <ul class="sidebar-list">
+                            <li>
+                                <a href="#">
+                                    <span>🛒 Сделать новый заказ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>🧩 Доступные дополнения</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </aside>
+            
+            <main class="main-content-wrapper">
+                
+                <div class="main-content-card">
+                    
+                    <nav class="tabs">
+                        <div class="tab-link active" data-tab="products">Продукты/Услуги</div>
+                        <div class="tab-link" data-tab="profile">Личные данные</div>
+                    </nav>
+
+                    <div class="tab-content active" id="products">
+                        
+                        <div class="table-controls">
+                            <span>Показано с 0 по 0 из 0</span>
+                            <input type="search" class="search-bar" placeholder="Поиск...">
+                        </div>
+                        
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Продукт/услуга</th>
+                                    <th>Цены</th>
+                                    <th>Дата следующего платежа</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" class="empty-state">
+                                        Записей не найдено
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="pagination-controls">
+                            <span>Показать: 10 записей</span>
+                            <div>
+                                <button disabled>Назад</button>
+                                <button disabled>Вперед</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="tab-content" id="profile">
+                        <h3>Ваши личные данные</h3>
+                        <p style="color: var(--muted); margin-bottom: 24px; font-size: 14px;">
+                          Вы можете обновить свою информацию в любое время.
+                        </p>
+                        
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="first-name">Имя</label>
+                                <input type="text" id="first-name" value="Иван">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last-name">Фамилия</label>
+                                <input type="text" id="last-name" value="Петров">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="ivan.petrov@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Название компании (необязательно)</label>
+                                <input type="text" id="company" placeholder="ООО 'Облачные Решения'">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" placeholder="+7 (999) 123-45-67">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="address">Адрес</label>
+                                <input type="text" id="address" placeholder="ул. Пушкина, д. 10">
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit">Сохранить изменения</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </main>
+            
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>&copy; 2025 ByteZone — Все права защищены </span>
+            <div class="footer-links">
+                <a href="first.html">О нас</a>
+                <a href="first.html">Тарифы</a>
+                <a href="first.html">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const tabId = link.getAttribute('data-tab');
+
+                    tabLinks.forEach(item => item.classList.remove('active'));
+                    tabContents.forEach(item => item.classList.remove('active'));
+
+                  
+                    link.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+        
+            const navToggle = document.querySelector('.nav-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            if(navToggle) {
+                navToggle.addEventListener('click', () => {
+                    mainNav.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+
